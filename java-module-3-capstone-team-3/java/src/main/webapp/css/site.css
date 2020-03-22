@@ -1,0 +1,158 @@
+#logo {
+	width: 30%;
+	margin-top: 41px;
+}
+.mainContainer {
+	background:#F5F5DC;
+	margin: 15px;
+}
+#main-content {
+	background: #FFFFFF;
+	margin: 0px 2px 0px 2px;
+}
+li {
+	list-style:none;
+	
+}
+
+a {
+	text-decoration:none;
+}
+
+h1 {
+	text-align:center;
+	font-weight:lighter;
+	color:#2b97d9;
+	font-weight: bold;
+	margin: 1px 0px 0px 0px;
+}
+h2 {
+	font-weight:lighter;
+	text-align:center;
+	color:#1fc909;
+	font-weight: bold;
+	margin: 1px 0px 0px 0px;
+}
+h3 {
+	font-weight:lighter;
+	text-align:center;
+	color:#5e3b04;
+	margin: 1px 0px 0px 0px;
+}
+.flex-grid-thirds {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.flex-grid-thirds .col {
+  width: 32%;
+}
+.forecast {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+#forecastimg {
+	width: 30%;
+}
+#parkimg {
+	margin-right: 2px;
+}
+#detailimg {
+	margin-right: 2px;
+}
+#favimg {
+	margin-bottom: 5px;
+}
+label {
+	font-weight: bold;
+	color: #5e3b04;
+}
+#parkInfo {
+	text-align: left;
+}
+#hideParkInfo {
+	display: none;1
+}
+#showParkInfo {
+	display: block;
+}
+#campgroundInfo {
+	text-align: left;
+}
+#siteInfo {
+	text-align: left;
+}
+#hideCampgroundInfo {
+	display: none;
+}
+#showCampgroundInfo {
+	display: block;
+}
+#hideSiteTable {
+	display: none;
+}
+#showSiteTable{
+	display: block;
+}
+#headerTitle {
+	font-size: 2em;
+	text-align:left;
+	text-shadow: 2px 2px 4px #2D4F41;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #5e3b04;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #5e3b04;
+  text-decoration: underline;
+}
+.optionList {
+display:flex;
+flex-direction: row;
+align-items: center;	
+}
+.prompt {
+	top: 0;
+	color: Green;
+}
+.choices {
+	top:0;
+}
+#footer{
+    margin-bottom:auto;
+	width:100%;
+	text-align:center;
+}
+
+.formFooter{
+	position:absolute;
+	bottom:0;
+	width:100%;
+	text-align:center;
+}
+.error{
+	color:red;
+	
+}
+.form-group {
+	margin-top: 5px;
+}

@@ -1,0 +1,136 @@
+Mapping(path="/parkDetailPage", method=RequestMethod.GET)
+
+		public String displayParkDetail(@RequestParam String parkCode, ModelMap modelMap, @RequestParam(value="temperature", required=false) String temperature) {
+
+			modelMap.addAttribute("park", parkDAO.getParkByCode(parkCode));
+
+			
+
+			List<Weather> advisoryList = new ArrayList<Weather>();
+
+			advisoryList = weatherDAO.getWeatherByParkCode(parkCode);
+
+			modelMap.addAttribute("advisoryList",advisoryList);
+
+			
+
+			if (temperature != null) {
+
+				modelMap.addAttribute("temperature", temperature);
+
+			}
+
+			modelMap.addAttribute("parkCode", parkCode);
+
+			String userchoice = (String)modelMap.get("temperature");
+
+			
+
+			this.setTempFromUserChoice(userchoice, parkCode, modelMap);
+
+			
+
+			return "parkDetailPage";
+
+			}
+
+		
+
+		@RequestMapping(path="/surveyInputPage", method=RequestMethod.GET)
+
+		public String displaySurveyPage() {
+
+			return "surveyInputPage";
+
+		}
+
+		public void setTempFromUserChoice (String userchoice, String parkCode, ModelMap modelMap) {
+
+			
+
+			List<Weather> weatherList = new ArrayList<Weather>();
+
+			weatherList = weatherDAO.getWeatherByParkCode(parkCode);
+
+			
+
+			//check session attribute to see if user has selected celcius(C) or fahrenheit(F)
+
+			
+
+			if  (userchoice == null) {
+
+				modelMap.addAttribute("temperature", fahrenheit);
+
+				modelMap.addAttribute("weatherList", weatherList);
+
+				modelMap.addAttribute("temp", "F");
+
+			} else if (userchoice.equals(celcius)) {
+
+				for (Weather weather : weatherList) {
+
+					
+
+					int fahrenheit = weather.getHigh();
+
+					int fahrenheitlow = weather.getLow();
+
+					weather.setHigh(converTempToCelcius(fahrenheit));
+
+					weather.setLow(converTempToCelcius(fahrenheitlow));
+
+				}
+
+				modelMap.addAttribute("weatherList", weatherList);
+
+				modelMap.addAttribute("temp", "C");
+
+			} else {
+
+				modelMap.addAttribute("weatherList", weatherList);
+
+				modelMap.addAttribute("temp", "F");
+
+			}		
+
+			
+
+		}
+
+
+
+		
+
+		public int converTempToCelcius(int fahrenheit) {
+
+			int celcius = (fahrenheit - 32) * 5 / 9;
+
+			return celcius;
+
+		}
+		
+		
+		
+		<c:when test="${dailyWeather.day==2}">
+					<div class="tomorrow">
+							<img src="img/weather/${dailyWeather.forecast}.png"><br>
+							<b>High:</b> ${dailyWeather.hiTemp}<br>
+							<b>Low:</b> ${dailyWeather.loTemp}<br>
+							<b>Forecast:</b> ${dailyWeather.forecast}<br>
+							<b>Weather Advisory:</b> ${advisoryList[0].advisory}<br>
+						</div>
+					</c:when>
+
+
+
+<body>
+	<div>
+		<h2>Favorite Parks</h2>
+		<c:forEach var="surveyList" items="${surveyResultList}">
+	img src="img/parks/${item.parkCode}.jpg"><br>
+	{surveyList.parkName}<br>
+	${surveyList.surveyCount}<br>
+		</c:forEach>
+	</div>
+</body>
