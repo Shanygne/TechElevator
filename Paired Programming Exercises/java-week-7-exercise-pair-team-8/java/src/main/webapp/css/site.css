@@ -1,0 +1,107 @@
+body {
+	width: 100%;
+	background-color: #212121;
+	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS',
+		sans-serif;
+}
+
+body, header, nav {
+	margin: 0px;
+}
+
+img {
+	width: 50%;
+}
+
+header {
+	background-color: #0099CC;
+	color: white;
+	padding: 10px 10px;
+}
+
+nav {
+	background-color: #8DC63F;
+	margin-bottom: 20px;
+	padding: 5px;
+	height: 50px;
+}
+
+nav ul {
+	float: left;
+}
+
+nav li {
+	list-style-type: none;
+	color: white;
+	margin-left: 25px;
+	margin-bottom: 10px;
+	font-size: 1.3em;
+	float: left;
+}
+
+nav li a {
+	color: white;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+nav li a:hover {
+	text-decoration: underline;
+}
+
+section {
+	clear: both;
+	display: block;
+	width: 80%;
+	margin: 20px auto;
+	vertical-align: top;
+	text-align: center;
+	min-height: 450px;
+	background-color: #FFF;
+	border-radius: 7px;
+}
+
+#content{
+	display:flex;
+	flex-wrap: nowrap;
+	justify-content: space-evenly;
+	background-color: #E7DE0A2;
+}
+
+.recipe {
+	display: inline-block;
+	width: 33%;
+	margin: 2%;
+	background-color: #f5f5dc;
+	text-decoration: none;	
+	color: black;
+}
+
+.rating {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	flex-wrap: no-wrap;
+	align-self: end;
+}
+
+.recipe img {
+	width: 100%;
+}
+
+.rating img {
+	width: 30%;
+	height: 50%;
+}
+
+.recipe-content img {
+	width: 40%;
+}
+
+a {
+	color: black;
+}
+
+tr:nth-child(even) {
+	background-color: #D3D3D3;
+}

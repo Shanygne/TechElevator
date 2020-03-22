@@ -1,0 +1,258 @@
+﻿body {
+	background-color: #000000;
+	font-family: sans-serif;
+}
+
+header {
+	margin: 25px;
+}
+
+header h1 {
+	font-size: 21pt;
+	color: #FFFFFF;
+}
+
+header p {
+	color: #FFFFFF;
+	/*font-size: 12pt;*/
+}
+
+header img {
+	height: 110px;
+}
+
+nav {
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+
+nav h2 {
+	color: #FFFFFF;
+	padding-left: 60px;
+}
+
+nav p {
+	color: #FFFFFF;
+	/*font-size: 12pt;*/
+	font-style: italic;
+	padding-left: 60px;
+}
+
+ul {
+	padding-left: 80px;
+}
+
+li {
+	padding-bottom: 4px;
+}
+
+li a {
+	color: #0D118B;
+	text-decoration: none;
+	list-style: none;
+	text-align: center;
+	vertical-align: middle;
+}
+
+nav ul {
+	width: 100%;
+}
+
+nav ul li {
+	float: left;
+	margin-right: 20px;
+	background-color: white;
+	border-radius: 8px;
+	list-style: none;
+	text-align: center;
+	width: 200px;
+	padding-top: 5px;
+}
+
+nav:after {
+	clear: both;
+}
+
+li a:hover {
+	text-decoration: underline;
+}
+
+section h1 {
+	color: #FFFFFF;
+	font-size: 21pt;
+	/* padding-left: 120px; */
+}
+
+section h2 {
+	color: #FFFFFF;
+	font-size: 18pt;
+}
+
+section p {
+	color: #FFFFFF;
+	/*font-size: 14pt;*/
+	width: 80%;
+	margin: 25px;
+	text-align: left;
+}
+
+section img {
+	width: 250px;
+	height: 250px;
+	border-color: #FFFFFF;
+	border-width: 8px;
+	border-style: solid;
+}
+
+.planets {
+	display: inline-block;
+	vertical-align: top;
+	width: 45%;
+	text-align: center;
+}
+
+.planet {
+	min-height: 700px;
+	vertical-align: top;
+	width: 80%;
+	margin: 0 auto;
+}
+
+.planet p {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#main-content {
+	background-color: white;
+	color: black;
+	border-radius: 10px;
+	/* width: 85%; */
+	margin: 60px 78px;
+	min-height: 400px;
+	padding-top: 10px;
+}
+
+#main-content h2 {
+	padding: 14px;
+	color: black;
+}
+
+#main-content p {
+	color: black;
+}
+
+.value {
+	color: green;
+	font-weight: bold;
+}
+
+form div {
+	padding: 10px 0px;
+}
+
+form div label {
+	width: 200px;
+	display: inline-block;
+	vertical-align: top;
+	padding-left: 20px;
+	color: black;
+}
+
+form button {
+	text-align: center;
+	margin-left: 224px;
+}
+
+input[type=text], input[type=datetime], textarea {
+	width: 300px;
+}
+
+th, td {
+	color: white;
+}
+
+table tr:first-child {
+	padding-bottom: 10px;
+	font-size: 1.1em;
+}
+
+table td {
+	min-width: 75px;
+	padding: 5px 5px;
+}
+
+section.centeredPanel {
+	clear: both;
+	display: block;
+	width: 80%;
+	vertical-align: top;
+	min-height: 450px;
+	background-color: #FFF;
+	border-radius: 7px;
+	margin-left: 60px;
+	margin-top: 60px;
+}
+
+section.centeredPanel h2 {
+	color: #000000;
+	text-align: center;
+}
+
+section.centeredPanel p {
+	color: #000;
+	text-align: left;
+}
+
+.centered {
+	text-align: center;
+	display: block;
+}
+
+/* Calculator Result */
+section#calculatorResult img {
+	float: left;
+}
+
+section#calculatorResult h2 {
+	float: left;
+	width: 50%;
+	text-align: left;
+}
+
+/* Space Forum Posts */
+.posts {
+	padding: 10px;
+}
+
+.posts .post {
+	padding-left: 10px;
+	padding-top: 10px;
+}
+
+.posts .post * {
+	color: #000;
+	margin: 0;
+}
+
+.posts .post h4 {
+	padding-top: 5px;
+}
+
+.posts .post p.message {
+	margin-top: 10px;
+	padding-bottom: 10px;
+}
+
+.posts .post:nth-child(2n) {
+	background-color: lightgray;
+}
+
+.copyright {
+	color: white;
+	text-align: center;
+}
+
+.white {
+	background-color: white
+}
